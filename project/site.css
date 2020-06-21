@@ -1,0 +1,147 @@
+/** site.css 
+ * You should add your CSS code to this file.  
+ * See the assignment description in Guide for what
+ * your code needs to accomplish.
+ */
+
+.label {
+  
+  color: gray;
+}
+
+#responsive-categories {
+  
+  display: none;
+}
+
+.row {
+  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  border: 1px solid gray;
+}
+
+.description {
+  
+  background: white;
+  color: gray;
+}
+
+.col {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.col {
+  
+  display: none;
+}
+
+.col:nth-child(2) {
+  
+  display: block;
+  background: gray;
+  border: none;
+}
+
+.col:nth-child(2) > p {
+  
+  display: inline-block;
+  width: 50%;
+}
+
+.col:nth-child(2) > p:nth-child(1) {
+  
+  float: left;
+}
+
+.col:nth-child(2) > p:last-child {
+  
+  width: 100%;
+  padding: 5px 0 5px 0;
+  margin-bottom: 0px;
+  display: none;
+}
+
+.col:nth-child(odd) {
+  
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.col:nth-child(2) > .label {
+  
+  color: black;
+}
+
+.toggle-info {
+  
+  background: white;
+  text-align: left;
+  color: gray;
+  border: none;
+}
+
+.block {
+  
+  display: block !important;
+}
+
+.inline-block {
+  
+  display: inline-block !important;
+}
+
+@media (min-width: 750px) {
+  
+  #responsive-categories {
+  
+    display: grid;
+    background-color: gray;
+    border-right: 1px solid gray !important;
+    width: 100%;
+  }
+  
+  .label, 
+  .toggle-info {
+    
+    display: none !important;
+  }
+  
+  .row {
+    
+    grid-template-columns: repeat(4, 1fr);
+    border: none;
+    border-right: 1px solid gray !important;
+  }
+
+  .col {
+    
+    display: block;
+    width: 100% !important;
+    background: white !important;
+    border: 1px solid gray !important;
+  }
+  
+  .col > p {
+    
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  .col > .label {
+    
+    display: none !important;
+  }
+  
+  .col:first-child {
+    
+    display: block;
+  }
+  
+  .description {
+    
+    margin-top: 10px;
+  }
+}
